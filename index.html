@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Laurel Advocacy – Design Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0072C5;
+      --primary-active: #005A9E;
+      --accent: #E54A2C;
+      --ink: #0B1F33;
+      --on-dark: #FFFFFF;
+      --on-dark-soft: #AEC3D8;
+      --surface-dark: #0B2540;
+      --surface-dark-elevated: #123457;
+      --hairline: rgba(255,255,255,0.10);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--surface-dark);
+      color: var(--on-dark);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -240px; left: 50%;
+      transform: translateX(-50%);
+      width: 1000px; height: 900px;
+      background: radial-gradient(ellipse, rgba(0,114,197,0.35) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .screen {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 960px;
+      padding: 40px 24px;
+    }
+    .screen.visible { display: flex; }
+
+    .logo { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .logo img { height: 56px; width: auto; }
+    .logo-sub {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--on-dark-soft);
+    }
+
+    .login-box {
+      background: var(--surface-dark-elevated);
+      border: 1px solid var(--hairline);
+      border-radius: 22px;
+      padding: 40px;
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--on-dark-soft);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      background: var(--surface-dark);
+      border: 1px solid var(--hairline);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font: inherit;
+      font-size: 15px;
+      color: var(--on-dark);
+      outline: none;
+      transition: border-color .2s;
+    }
+    input[type="password"]:focus { border-color: var(--primary); }
+
+    .btn {
+      width: 100%;
+      background: var(--primary);
+      color: var(--on-dark);
+      border: 0;
+      border-radius: 9999px;
+      padding: 14px 24px;
+      font: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .btn:hover { background: var(--primary-active); }
+
+    .error { min-height: 18px; font-size: 13px; color: #ff8a73; text-align: center; }
+
+    .choice-title { text-align: center; }
+    .choice-title h1 { font-size: 28px; font-weight: 700; }
+    .choice-title p { margin-top: 8px; color: var(--on-dark-soft); font-size: 15px; }
+
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
+    .choice-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 28px 24px;
+      background: var(--surface-dark-elevated);
+      border: 1px solid var(--hairline);
+      border-radius: 22px;
+      color: inherit;
+      text-decoration: none;
+      transition: transform .2s, border-color .2s;
+    }
+    .choice-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .choice-card .tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .choice-card h2 { font-size: 20px; font-weight: 700; }
+    .choice-card p { font-size: 14px; line-height: 1.6; color: var(--on-dark-soft); }
+
+    .signout {
+      background: none; border: 0; color: var(--on-dark-soft);
+      font: inherit; font-size: 13px; cursor: pointer; text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+      .choices { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login -->
+  <div class="screen" id="login-screen">
+    <div class="logo">
+      <img src="colormocks/assets/images/LARS-Logo-White-1.png" alt="Laurel Advocacy" />
+      <div class="logo-sub">Design Review</div>
+    </div>
+    <form class="login-box" id="login-form">
+      <div>
+        <label for="pw">Password</label>
+        <input type="password" id="pw" placeholder="Enter access password" autocomplete="current-password" />
+      </div>
+      <button class="btn" type="submit">Enter</button>
+      <div class="error" id="err"></div>
+    </form>
+  </div>
+
+  <!-- Choice -->
+  <div class="screen" id="choice-screen">
+    <div class="logo">
+      <img src="colormocks/assets/images/LARS-Logo-White-1.png" alt="Laurel Advocacy" />
+      <div class="logo-sub">Design Review</div>
+    </div>
+    <div class="choice-title">
+      <h1>What would you like to review?</h1>
+      <p>Sitemap, wireframes and color mocks for the Laurel Advocacy website.</p>
+    </div>
+    <div class="choices">
+      <a class="choice-card" href="sitemap/index.html" target="_blank">
+        <span class="tag">Structure</span>
+        <h2>Sitemap</h2>
+        <p>Page hierarchy and primary pathways across the site.</p>
+      </a>
+      <a class="choice-card" href="wireframes/index.html" target="_blank">
+        <span class="tag">Layout</span>
+        <h2>Wireframes</h2>
+        <p>Page layouts and content structure, before color and imagery.</p>
+      </a>
+      <a class="choice-card" href="colormocks/home.html" target="_blank">
+        <span class="tag">Visual</span>
+        <h2>Color Mocks</h2>
+        <p>Full-color designs with brand, photography and typography.</p>
+      </a>
+    </div>
+    <button class="signout" id="signout" type="button">Sign out</button>
+  </div>
+
+  <script>
+    const PASSWORD = "mojo2026";
+    const KEY = "laurel-auth";
+    const login = document.getElementById("login-screen");
+    const choice = document.getElementById("choice-screen");
+    const err = document.getElementById("err");
+
+    function show(screen) {
+      login.classList.remove("visible");
+      choice.classList.remove("visible");
+      screen.classList.add("visible");
+    }
+
+    document.getElementById("login-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (document.getElementById("pw").value === PASSWORD) {
+        sessionStorage.setItem(KEY, "1");
+        err.textContent = "";
+        show(choice);
+      } else {
+        err.textContent = "Incorrect password. Try again.";
+      }
+    });
+
+    document.getElementById("signout").addEventListener("click", function () {
+      sessionStorage.removeItem(KEY);
+      document.getElementById("pw").value = "";
+      show(login);
+    });
+
+    show(sessionStorage.getItem(KEY) === "1" ? choice : login);
+  </script>
+</body>
+</html>

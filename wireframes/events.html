@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — Laurel Advocacy</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ============== NAV ============== -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__brand">LAUREL ADVOCACY</a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs-support.html">Programs &amp; Support</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="news-blog.html">News/Blog</a></li>
+          <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__cta">
+          <a href="get-involved.html#give" class="btn btn-primary">Donate</a>
+        </div>
+        <button class="nav__menu-btn" data-mobile-menu-toggle="#laurel-mobile-nav" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav-mobile" id="laurel-mobile-nav">
+    <button class="nav-mobile__close" data-mobile-menu-close aria-label="Close menu">
+      <i data-lucide="x"></i>
+    </button>
+    <ul class="nav-mobile__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs-support.html">Programs &amp; Support</a></li>
+      <li><a href="get-involved.html">Get Involved</a></li>
+      <li><a href="news-blog.html">News/Blog</a></li>
+      <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="get-involved.html#give">Donate</a></li>
+    </ul>
+  </div>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero hero--centered">
+    <div class="container">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Events</p>
+        <h1 class="hero__title">Events</h1>
+        <p class="hero__lead">Join us throughout the year at fundraisers, drives, and community gatherings that support our mission.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== UPCOMING EVENTS (composed event-card grid) ============== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center mb-12">Upcoming Events</h2>
+      <style>
+        .event-card { display: flex; flex-direction: column; }
+        .event-card__date-badge {
+          display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+          width: 56px; height: 56px; border-radius: var(--radius-md); background: var(--gray-900); color: var(--white);
+          margin-bottom: 16px;
+        }
+        .event-card__date-badge .month { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+        .event-card__date-badge .day { font-size: 20px; font-weight: 700; line-height: 1; }
+        .event-card__meta { display: flex; flex-direction: column; gap: 4px; margin: 8px 0 16px; color: var(--gray-600); font-size: 14px; }
+        .event-card__meta span { display: flex; align-items: center; gap: 6px; }
+      </style>
+      <div class="grid-3">
+        <div class="event-card">
+          <div class="img-placeholder img-placeholder--4-3">[IMAGE 4:3 — Volunteers at last year's food drive]</div>
+          <div class="event-card__date-badge"><span class="month">Oct</span><span class="day">4</span></div>
+          <h3>Fall Food &amp; Coat Drive</h3>
+          <div class="event-card__meta">
+            <span><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> Laurel Advocacy Main Campus</span>
+            <span><i data-lucide="clock" style="width: 14px; height: 14px;"></i> 9:00 AM – 1:00 PM</span>
+          </div>
+          <button class="btn btn-secondary">Learn More</button>
+        </div>
+        <div class="event-card">
+          <div class="img-placeholder img-placeholder--4-3">[IMAGE 4:3 — Volunteers at a community 5K walk]</div>
+          <div class="event-card__date-badge"><span class="month">Oct</span><span class="day">18</span></div>
+          <h3>Community 5K Walk for Housing</h3>
+          <div class="event-card__meta">
+            <span><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> Riverside Park</span>
+            <span><i data-lucide="clock" style="width: 14px; height: 14px;"></i> 8:00 AM – 11:00 AM</span>
+          </div>
+          <button class="btn btn-secondary">Learn More</button>
+        </div>
+        <div class="event-card">
+          <div class="img-placeholder img-placeholder--4-3">[IMAGE 4:3 — Guests mingling at a fundraising gala]</div>
+          <div class="event-card__date-badge"><span class="month">Nov</span><span class="day">8</span></div>
+          <h3>Annual Gala for Hope</h3>
+          <div class="event-card__meta">
+            <span><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> Grand Hall Event Center</span>
+            <span><i data-lucide="clock" style="width: 14px; height: 14px;"></i> 6:00 PM – 10:00 PM</span>
+          </div>
+          <button class="btn btn-secondary">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SIGNATURE EVENTS ============== -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="text-center mb-12">Signature Events</h2>
+      <div class="zigzag-row">
+        <div>
+          <h2>Annual Gala for Hope</h2>
+          <p>Our flagship fundraiser brings together 300+ community members, local businesses, and program alumni for an evening of dinner, stories, and a live fundraising appeal. Proceeds directly fund a full year of emergency shelter operations.</p>
+          <ul>
+            <li>Keynote from a program graduate</li>
+            <li>Silent auction with items donated by local businesses</li>
+            <li>Held every November at Grand Hall Event Center</li>
+          </ul>
+        </div>
+        <div class="zigzag-row__media">
+          <div class="img-placeholder img-placeholder--4-3">[IMAGE 4:3 — Annual Gala for Hope ballroom setup]</div>
+        </div>
+      </div>
+      <div class="zigzag-row zigzag-row--reverse" style="margin-top: 48px;">
+        <div>
+          <h2>Community 5K Walk for Housing</h2>
+          <p>Every October, hundreds of neighbors lace up for a 5K walk through Riverside Park to raise awareness and funds for our Housing Services program. Teams, families, and first-time walkers are all welcome.</p>
+          <ul>
+            <li>Free registration for program clients and their families</li>
+            <li>Team fundraising pages and matching-gift challenges</li>
+            <li>Held every October at Riverside Park</li>
+          </ul>
+        </div>
+        <div class="zigzag-row__media">
+          <div class="img-placeholder img-placeholder--4-3">[IMAGE 4:3 — Community 5K Walk for Housing crowd at the start line]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CLOSING CTA ============== -->
+  <section class="section text-center">
+    <div class="container container--narrow">
+      <h2 class="mb-4">Want to See What We've Done Before?</h2>
+      <p class="lead mb-8">Browse photos, recaps, and highlights from past fundraisers and community events.</p>
+      <button class="btn btn-secondary btn--lg">See Past Events</button>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cols">
+        <div class="footer__brand-block">
+          <p style="color: var(--white); font-weight: 700; font-size: 18px; margin-bottom: 12px;">LAUREL ADVOCACY</p>
+          <p style="color: var(--gray-400); font-size: 14px;">Supporting neighbors and families through crisis, toward safety and self-sufficiency.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs-support.html">Programs &amp; Support</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>More</h4>
+          <ul>
+            <li><a href="news-blog.html">News/Blog</a></li>
+            <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div style="display: flex; gap: 12px; margin-top: 4px;">
+            <a href="#" aria-label="Facebook (opens in a new tab)" style="color: var(--gray-400); display: inline-flex; align-items: center;"><i data-lucide="facebook" style="width: 18px; height: 18px;"></i><i data-lucide="external-link" style="width: 11px; height: 11px; margin-left: 2px;"></i></a>
+            <a href="#" aria-label="Instagram (opens in a new tab)" style="color: var(--gray-400); display: inline-flex; align-items: center;"><i data-lucide="instagram" style="width: 18px; height: 18px;"></i><i data-lucide="external-link" style="width: 11px; height: 11px; margin-left: 2px;"></i></a>
+            <a href="#" aria-label="X (opens in a new tab)" style="color: var(--gray-400); display: inline-flex; align-items: center;"><i data-lucide="twitter" style="width: 18px; height: 18px;"></i><i data-lucide="external-link" style="width: 11px; height: 11px; margin-left: 2px;"></i></a>
+            <a href="#" aria-label="LinkedIn (opens in a new tab)" style="color: var(--gray-400); display: inline-flex; align-items: center;"><i data-lucide="linkedin" style="width: 18px; height: 18px;"></i><i data-lucide="external-link" style="width: 11px; height: 11px; margin-left: 2px;"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Laurel Advocacy. All rights reserved.</span>
+        <span>Privacy · Terms · Cookies</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>
