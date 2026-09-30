@@ -420,64 +420,12 @@
   .sm-grid.view-full .node.main { color: #fff; }
   .sm-grid.view-full .node.secondary .desc { color: #e8e8e8; }
 
-  /* ============== TWEAKS ============== */
-  .tweaks-toggle {
-    position: fixed;
-    bottom: 18px;
-    right: 18px;
-    z-index: 50;
-    background: #111;
-    color: #fff;
-    border: none;
-    padding: 10px 14px;
-    border-radius: 6px;
-    font-family: var(--font-ui);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  }
-  .tweaks-panel {
-    position: fixed;
-    bottom: 60px;
-    right: 18px;
-    width: 280px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
-    padding: 14px 16px;
-    z-index: 50;
-    display: none;
-    font-size: 12px;
-  }
-  .tweaks-panel.open { display: block; }
-  .tweaks-panel h4 {
-    margin: 0 0 10px;
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #6a6a6a;
-    font-weight: 700;
-  }
-  .tweak-row { display: flex; align-items: center; justify-content: space-between; margin: 8px 0; gap: 10px; }
-  .tweak-row label { font-size: 11px; color: #333; }
-  .tweak-row input[type="text"] {
-    flex: 1; min-width: 0;
-    border: 1px solid #ddd; padding: 5px 7px; font-size: 11px; border-radius: 4px;
-    font-family: var(--font-ui);
-  }
-  .tweak-row input[type="color"] { width: 32px; height: 24px; border: 1px solid #ddd; padding: 0; border-radius: 4px; background: #fff; }
-
-  /* ============== PRINT / PDF EXPORT ============== */
+/* ============== PRINT / PDF EXPORT ============== */
   /* Hide HTML-only UI (view switcher, tweaks) when rendering to PDF.
      The PDF export script picks the view before rendering — the chosen view
      stays applied; only the controls disappear. */
   @media print {
     .view-switcher,
-    .tweaks-toggle,
-    .tweaks-panel,
     .sm-header-actions { display: none !important; }
     body { background: #fff !important; }
     .sitemap-doc {
@@ -732,21 +680,6 @@
       </div>
 
     </div>
-  </div>
-
-  <!-- ============================================================ -->
-  <!-- TWEAKS                                                         -->
-  <!-- ============================================================ -->
-  <button class="tweaks-toggle" id="tweaks-toggle">Tweaks</button>
-  <div class="tweaks-panel" id="tweaks-panel">
-    <h4>Header</h4>
-    <div class="tweak-row">
-      <label>Project</label>
-      <input type="text" id="tw-project" value="PROJECT NAME">
-    </div>
-
-    <h4 style="margin-top:14px;">Colors</h4>
-    <div class="tweak-row"><label>Pathway color</label><input type="color" id="tw-pathway" value="#1f8ad6"></div>
   </div>
 
 <script>
@@ -1070,21 +1003,6 @@
       document.querySelectorAll('#grid .node.' + filter).forEach(n => n.classList.add('is-highlighted'));
     }
   }
-
-  // ============================================================
-  // TWEAKS
-  // ============================================================
-  const toggleBtn = document.getElementById('tweaks-toggle');
-  const panel = document.getElementById('tweaks-panel');
-  toggleBtn.addEventListener('click', () => panel.classList.toggle('open'));
-
-  document.getElementById('tw-project').addEventListener('input', e => {
-    document.getElementById('project-name').textContent = e.target.value || 'PROJECT NAME';
-  });
-  document.getElementById('tw-pathway').addEventListener('input', e => {
-    document.documentElement.style.setProperty('--pathway', e.target.value);
-    drawConnectors();
-  });
 
   // ============================================================
   // ADJUST RAIL HEIGHT to match the last used row in the grid
