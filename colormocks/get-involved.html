@@ -19,7 +19,15 @@
         <a href="home.html" class="nav__brand"><img src="assets/images/lars-logo-1.png" alt="Laurel Advocacy" class="nav__brand-logo"></a>
         <ul class="nav__links">
           <li><a href="about.html">About</a></li>
-          <li><a href="programs-support.html">Programs &amp; Support</a></li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="programs-support.html" class="nav__dropdown-toggle">Programs &amp; Support <i data-lucide="chevron-down"></i></a>
+            <ul class="nav__dropdown">
+              <li><a href="emergency-services.html">Emergency Services</a></li>
+              <li><a href="lars-on-the-go.html">LARS On the Go!</a></li>
+              <li><a href="stay.html">STAY</a></li>
+              <li><a href="permanent-supportive-housing.html">Permanent Supportive Housing</a></li>
+            </ul>
+          </li>
           <li><a href="get-involved.html">Get Involved</a></li>
           <li><a href="news-blog.html">News/Blog</a></li>
           <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
@@ -42,7 +50,15 @@
     </button>
     <ul class="nav-mobile__links">
       <li><a href="about.html">About</a></li>
-      <li><a href="programs-support.html">Programs &amp; Support</a></li>
+      <li>
+        <a href="programs-support.html">Programs &amp; Support</a>
+        <ul class="nav-mobile__sub">
+          <li><a href="emergency-services.html">Emergency Services</a></li>
+          <li><a href="lars-on-the-go.html">LARS On the Go!</a></li>
+          <li><a href="stay.html">STAY</a></li>
+          <li><a href="permanent-supportive-housing.html">Permanent Supportive Housing</a></li>
+        </ul>
+      </li>
       <li><a href="get-involved.html">Get Involved</a></li>
       <li><a href="news-blog.html">News/Blog</a></li>
       <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
@@ -100,7 +116,7 @@
               <div>
                 <h2>Volunteer</h2>
                 <p>Our volunteers sort donations, staff events, mentor teens, and provide childcare during support groups. No experience is required — just a few hours and a willingness to help.</p>
-                <a href="contact.html" class="btn btn-primary">Sign Up to Volunteer</a>
+                <a href="#volunteer" class="btn btn-primary">Sign Up to Volunteer</a>
               </div>
               <div class="zigzag-row__media">
                 <img src="assets/images/get-involved-1.jpeg" alt="A Laurel Advocacy volunteer coordinator laughing with volunteers">
@@ -120,6 +136,185 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== IMPACT STATS ============== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="impact-bento__heading mb-12">Making a <span class="impact-bento__highlight">real difference</span> in Laurel, MD</h2>
+      <div class="impact-bento__grid">
+        <div class="impact-bento__cell impact-bento__cell--accent">
+          <span class="impact-bento__icon"><i data-lucide="calendar-heart"></i></span>
+          <div class="impact-bento__stat">45+</div>
+          <p class="impact-bento__label">Years of service</p>
+        </div>
+        <div class="impact-bento__cell impact-bento__cell--dark">
+          <div class="impact-bento__stat">18,000</div>
+          <p class="impact-bento__label">Nights of shelter provided</p>
+          <div class="impact-bento__avatars">
+            <img src="assets/images/approach-1.jpg" alt="">
+            <img src="assets/images/approach-2.jpg" alt="">
+            <img src="assets/images/get-involved-1.jpeg" alt="">
+          </div>
+        </div>
+        <div class="impact-bento__cell impact-bento__cell--photo impact-bento__cell--tall">
+          <img src="assets/images/impact-3.png" alt="Volunteers serving a meal to a community member">
+          <div class="impact-bento__overlay">
+            <div class="impact-bento__stat">1,200+</div>
+            <p class="impact-bento__label">Families served annually</p>
+          </div>
+        </div>
+        <div class="impact-bento__cell impact-bento__cell--primary impact-bento__cell--split">
+          <div class="impact-bento__stat">50,000</div>
+          <div>
+            <p class="impact-bento__label">Meals served each year</p>
+            <p class="impact-bento__note">Hot meals, pantry staples, and grocery support delivered with dignity to neighbors across Laurel, MD.</p>
+          </div>
+        </div>
+        <div class="impact-bento__cell impact-bento__cell--photo">
+          <img src="assets/images/impact-4.png" alt="A community member Laurel Advocacy has supported" style="object-position: 65% center;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== VOLUNTEER INTEREST FORM ============== -->
+  <section class="section section--tint-blue" id="volunteer">
+    <div class="container">
+      <div class="sticky-split">
+        <div class="sticky-split__intro">
+          <h2 class="mb-4">Volunteer Interest Form</h2>
+          <p class="lead mb-4">Fill out the form to get started volunteering with us!</p>
+          <p class="muted small"><span class="form-required" aria-hidden="true">*</span> Indicates required field</p>
+        </div>
+        <div class="form-card" style="align-self: start;">
+          <form>
+            <div class="form-group">
+              <label class="form-label" for="vol-name">Full Name of Person / Group&nbsp;<span class="form-required" aria-hidden="true">*</span></label>
+              <input class="form-input" id="vol-name" type="text" required>
+            </div>
+            <div class="form-row--two">
+              <div class="form-group">
+                <label class="form-label" for="vol-phone">Phone Number&nbsp;<span class="form-required" aria-hidden="true">*</span></label>
+                <input class="form-input" id="vol-phone" type="tel" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="vol-email">Email&nbsp;<span class="form-required" aria-hidden="true">*</span></label>
+                <input class="form-input" id="vol-email" type="email" required>
+              </div>
+            </div>
+            <fieldset class="form-group form-fieldset">
+              <legend class="form-label">Preferred Method of Contact&nbsp;<span class="form-required" aria-hidden="true">*</span></legend>
+              <div class="form-choices">
+                <label class="form-choice"><input type="checkbox" name="vol-contact-method" value="Phone"> <span>Phone</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-contact-method" value="Email"> <span>Email</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-contact-method" value="Phone &amp; Email"> <span>Phone &amp; Email</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group form-fieldset">
+              <legend class="form-label">Is the Volunteer at Least 18 Years Old?&nbsp;<span class="form-required" aria-hidden="true">*</span></legend>
+              <div class="form-choices">
+                <label class="form-choice"><input type="radio" name="vol-age" value="Yes"> <span>Yes</span></label>
+                <label class="form-choice"><input type="radio" name="vol-age" value="No"> <span>No</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group form-fieldset">
+              <legend class="form-label">Have you or anyone in your family received services from LARS in the past 5 years?&nbsp;<span class="form-required" aria-hidden="true">*</span></legend>
+              <div class="form-choices">
+                <label class="form-choice"><input type="radio" name="vol-lars" value="Yes"> <span>Yes</span></label>
+                <label class="form-choice"><input type="radio" name="vol-lars" value="No"> <span>No</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group form-fieldset">
+              <legend class="form-label">Is this request for Court Ordered Community Service Hours?&nbsp;<span class="form-required" aria-hidden="true">*</span></legend>
+              <div class="form-choices">
+                <label class="form-choice"><input type="radio" name="vol-court" value="Yes"> <span>Yes</span></label>
+                <label class="form-choice"><input type="radio" name="vol-court" value="No"> <span>No</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group form-fieldset">
+              <legend class="form-label">Do you speak another language, other than English?&nbsp;<span class="form-required" aria-hidden="true">*</span></legend>
+              <div class="form-choices">
+                <label class="form-choice"><input type="radio" name="vol-language" value="Yes"> <span>Yes</span></label>
+                <label class="form-choice"><input type="radio" name="vol-language" value="No"> <span>No</span></label>
+              </div>
+            </fieldset>
+            <div class="form-group">
+              <label class="form-label" for="vol-language-detail">If you do speak another language, indicate language and level of proficiency (basic / intermediate / fluent)&nbsp;<span class="form-required" aria-hidden="true">*</span></label>
+              <input class="form-input" id="vol-language-detail" type="text">
+            </div>
+            <fieldset class="form-group form-fieldset">
+              <legend class="form-label">Please tell us how you would like to volunteer with Laurel Advocacy &amp; Referral Services, Inc.&nbsp;<span class="form-required" aria-hidden="true">*</span></legend>
+              <div class="form-choices form-choices--cols">
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Photography/ Video"> <span>Photography/ Video</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Language translation"> <span>Language translation</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Data entry"> <span>Data entry</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="General office / clerical work"> <span>General office / clerical work</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Special events"> <span>Special events</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Maintenance / Repairs"> <span>Maintenance / Repairs</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Group volunteering"> <span>Group volunteering</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Case management"> <span>Case management</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Human resources / payroll / accounting"> <span>Human resources / payroll / accounting</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Food pantry"> <span>Food pantry</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Food pick-up &amp; delivery"> <span>Food pick-up &amp; delivery</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Mailings / envelope stuffing"> <span>Mailings / envelope stuffing</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Graphic design"> <span>Graphic design</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Speaker (On specific topics)"> <span>Speaker (On specific topics)</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="BSW / MSW Internship"> <span>BSW / MSW Internship</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Job seeker services"> <span>Job seeker services</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Wherever you need me"> <span>Wherever you need me</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="form-group form-fieldset">
+              <legend class="form-label">If a criminal background check is required, can this be achieved?&nbsp;<span class="form-required" aria-hidden="true">*</span></legend>
+              <div class="form-choices">
+                <label class="form-choice"><input type="radio" name="vol-background" value="Yes"> <span>Yes</span></label>
+                <label class="form-choice"><input type="radio" name="vol-background" value="No"> <span>No</span></label>
+              </div>
+            </fieldset>
+            <div class="form-group">
+              <label class="form-label" for="vol-background-reason">If a criminal background check cannot be completed, please explain why:&nbsp;<span class="form-required" aria-hidden="true">*</span></label>
+              <textarea class="form-textarea" id="vol-background-reason" placeholder="Indicate your reason here"></textarea>
+            </div>
+            <fieldset class="form-group form-fieldset">
+              <legend class="form-label">Is this request for School Mandated Hours?&nbsp;<span class="form-required" aria-hidden="true">*</span></legend>
+              <div class="form-choices">
+                <label class="form-choice"><input type="radio" name="vol-school" value="Yes"> <span>Yes</span></label>
+                <label class="form-choice"><input type="radio" name="vol-school" value="No"> <span>No</span></label>
+              </div>
+            </fieldset>
+            <div class="form-group">
+              <label class="form-label" for="vol-skills">Professional training, skills or hobbies&nbsp;<span class="form-required" aria-hidden="true">*</span></label>
+              <textarea class="form-textarea" id="vol-skills"></textarea>
+            </div>
+            <fieldset class="form-group form-fieldset">
+              <legend class="form-label">When are you available for volunteer assignments? Please check all that are applicable.&nbsp;<span class="form-required" aria-hidden="true">*</span></legend>
+              <div class="form-choices form-choices--cols">
+                <label class="form-choice"><input type="checkbox" name="vol-availability" value="Morning"> <span>Morning</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-availability" value="Afternoon"> <span>Afternoon</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-availability" value="Evening"> <span>Evening</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-availability" value="Weekend"> <span>Weekend</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-availability" value="One time only"> <span>One time only</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-availability" value="Once a week"> <span>Once a week</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-availability" value="More than once a week"> <span>More than once a week</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-availability" value="1x / 2x a month"> <span>1x / 2x a month</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-availability" value="As needed"> <span>As needed</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-availability" value="From home"> <span>From home</span></label>
+              </div>
+            </fieldset>
+            <div class="form-group">
+              <label class="form-label" for="vol-alt-availability">Alternate volunteer availability: please specify&nbsp;<span class="form-required" aria-hidden="true">*</span></label>
+              <input class="form-input" id="vol-alt-availability" type="text">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="vol-other-skills">Other skills-based opportunity: Please Specify&nbsp;<span class="form-required" aria-hidden="true">*</span></label>
+              <input class="form-input" id="vol-other-skills" type="text">
+            </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
+          </form>
         </div>
       </div>
     </div>
@@ -157,6 +352,7 @@
             <li><a href="news-blog.html">News/Blog</a></li>
             <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
             <li><a href="events.html">Events</a></li>
+            <li><a href="careers.html">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -193,11 +389,64 @@
       </div>
       <div class="footer__bottom">
         <span>© 2026 Laurel Advocacy. All rights reserved.</span>
-        <span>LARS Federal Tax ID #52-1537336 · Privacy · Terms · Cookies</span>
+        <span>LARS Federal Tax ID #52-1537336 · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a></span>
       </div>
     </div>
   </footer>
 
   <script src="assets/scripts.js"></script>
+  <script>
+    // Count up the impact stats once the grid scrolls into view.
+    (function () {
+      var items = [];
+      document.querySelectorAll('.impact-bento__stat').forEach(function (el) {
+        var match = el.textContent.trim().match(/^([\d,]+)(.*)$/);
+        if (!match) return;
+        var target = parseInt(match[1].replace(/,/g, ''), 10);
+        if (isNaN(target)) return;
+        var suffix = match[2] || '';
+        items.push({ el: el, target: target, suffix: suffix });
+        el.textContent = '0' + suffix;
+      });
+      if (!items.length) return;
+
+      var grid = document.querySelector('.impact-bento__grid');
+      if (!grid) return;
+
+      var animated = false;
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+      function animate() {
+        if (animated) return;
+        animated = true;
+        var duration = 2000;
+        var start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          var progress = Math.min((ts - start) / duration, 1);
+          var eased = easeOutCubic(progress);
+          items.forEach(function (item) {
+            var value = Math.round(item.target * eased);
+            item.el.textContent = value.toLocaleString() + item.suffix;
+          });
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animate();
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.3 });
+        observer.observe(grid);
+      } else {
+        animate();
+      }
+    })();
+  </script>
 </body>
 </html>

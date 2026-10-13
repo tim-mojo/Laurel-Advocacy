@@ -19,7 +19,15 @@
         <a href="home.html" class="nav__brand"><img src="assets/images/lars-logo-1.png" alt="Laurel Advocacy" class="nav__brand-logo"></a>
         <ul class="nav__links">
           <li><a href="about.html">About</a></li>
-          <li><a href="programs-support.html">Programs &amp; Support</a></li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="programs-support.html" class="nav__dropdown-toggle">Programs &amp; Support <i data-lucide="chevron-down"></i></a>
+            <ul class="nav__dropdown">
+              <li><a href="emergency-services.html">Emergency Services</a></li>
+              <li><a href="lars-on-the-go.html">LARS On the Go!</a></li>
+              <li><a href="stay.html">STAY</a></li>
+              <li><a href="permanent-supportive-housing.html">Permanent Supportive Housing</a></li>
+            </ul>
+          </li>
           <li><a href="get-involved.html">Get Involved</a></li>
           <li><a href="news-blog.html">News/Blog</a></li>
           <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
@@ -42,7 +50,15 @@
     </button>
     <ul class="nav-mobile__links">
       <li><a href="about.html">About</a></li>
-      <li><a href="programs-support.html">Programs &amp; Support</a></li>
+      <li>
+        <a href="programs-support.html">Programs &amp; Support</a>
+        <ul class="nav-mobile__sub">
+          <li><a href="emergency-services.html">Emergency Services</a></li>
+          <li><a href="lars-on-the-go.html">LARS On the Go!</a></li>
+          <li><a href="stay.html">STAY</a></li>
+          <li><a href="permanent-supportive-housing.html">Permanent Supportive Housing</a></li>
+        </ul>
+      </li>
       <li><a href="get-involved.html">Get Involved</a></li>
       <li><a href="news-blog.html">News/Blog</a></li>
       <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
@@ -479,6 +495,7 @@
             <li><a href="news-blog.html">News/Blog</a></li>
             <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
             <li><a href="events.html">Events</a></li>
+            <li><a href="careers.html">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -515,7 +532,7 @@
       </div>
       <div class="footer__bottom">
         <span>© 2026 Laurel Advocacy. All rights reserved.</span>
-        <span>LARS Federal Tax ID #52-1537336 · Privacy · Terms · Cookies</span>
+        <span>LARS Federal Tax ID #52-1537336 · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a></span>
       </div>
     </div>
   </footer>

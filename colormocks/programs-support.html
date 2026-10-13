@@ -19,7 +19,15 @@
         <a href="home.html" class="nav__brand"><img src="assets/images/lars-logo-1.png" alt="Laurel Advocacy" class="nav__brand-logo"></a>
         <ul class="nav__links">
           <li><a href="about.html">About</a></li>
-          <li><a href="programs-support.html">Programs &amp; Support</a></li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="programs-support.html" class="nav__dropdown-toggle">Programs &amp; Support <i data-lucide="chevron-down"></i></a>
+            <ul class="nav__dropdown">
+              <li><a href="emergency-services.html">Emergency Services</a></li>
+              <li><a href="lars-on-the-go.html">LARS On the Go!</a></li>
+              <li><a href="stay.html">STAY</a></li>
+              <li><a href="permanent-supportive-housing.html">Permanent Supportive Housing</a></li>
+            </ul>
+          </li>
           <li><a href="get-involved.html">Get Involved</a></li>
           <li><a href="news-blog.html">News/Blog</a></li>
           <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
@@ -42,7 +50,15 @@
     </button>
     <ul class="nav-mobile__links">
       <li><a href="about.html">About</a></li>
-      <li><a href="programs-support.html">Programs &amp; Support</a></li>
+      <li>
+        <a href="programs-support.html">Programs &amp; Support</a>
+        <ul class="nav-mobile__sub">
+          <li><a href="emergency-services.html">Emergency Services</a></li>
+          <li><a href="lars-on-the-go.html">LARS On the Go!</a></li>
+          <li><a href="stay.html">STAY</a></li>
+          <li><a href="permanent-supportive-housing.html">Permanent Supportive Housing</a></li>
+        </ul>
+      </li>
       <li><a href="get-involved.html">Get Involved</a></li>
       <li><a href="news-blog.html">News/Blog</a></li>
       <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
@@ -105,16 +121,16 @@
           <div class="zigzag-row">
             <div>
               <h2>Emergency Services</h2>
-              <p>When crisis hits without warning, our team is here around the clock. We provide immediate safety planning, a 24-hour crisis line, and emergency shelter for individuals and families with nowhere else to turn.</p>
+              <p>When money runs short, start here. We help with food, rent, bills and more. You meet with a case manager who helps you make a plan, and we stay in touch after your visit.</p>
               <ul>
-                <li>24/7 crisis line and safety planning</li>
-                <li>Emergency shelter placement</li>
-                <li>Immediate needs support (food, clothing, transportation)</li>
+                <li>Walk in Monday to Thursday, no appointment needed</li>
+                <li>Food, diapers and fresh produce from our pantry</li>
+                <li>Help with rent, power, heat and water</li>
               </ul>
-              <a href="contact.html" class="btn btn-secondary">Get Help Now</a>
+              <a href="emergency-services.html" class="btn btn-secondary">Get Help in a Crisis</a>
             </div>
             <div class="zigzag-row__media">
-              <img src="assets/images/Impact-1.jpg" alt="A Laurel Advocacy team member providing immediate support to a client">
+              <img src="assets/images/CrisisCenter-1.png" alt="The Laurel Advocacy crisis center">
             </div>
           </div>
         </div>
@@ -122,17 +138,17 @@
         <div class="program-card">
           <div class="zigzag-row">
             <div>
-              <h2>Housing Services</h2>
-              <p>We help families move from crisis into a stable home through transitional housing, rapid re-housing assistance, and one-on-one housing navigation with a dedicated case manager.</p>
+              <h2>LARS On the Go!</h2>
+              <p>Some people cannot easily get to our office, so we go to them. We bring food and support to senior communities and other places where people gather.</p>
               <ul>
-                <li>Transitional and rapid re-housing programs</li>
-                <li>Housing navigation and landlord partnerships</li>
-                <li>Rental and deposit assistance</li>
+                <li>THRIVE: grocery delivery and weekly check-ins for seniors</li>
+                <li>Project GROW: monthly gardening classes from April to October</li>
+                <li>Call 301-776-0442 or email mobile@laureladvocacy.org</li>
               </ul>
-              <a href="contact.html" class="btn btn-secondary">Learn More</a>
+              <a href="lars-on-the-go.html" class="btn btn-secondary">See Services That Come to You</a>
             </div>
             <div class="zigzag-row__media">
-              <img src="assets/images/approach-2.jpg" alt="A Laurel Advocacy client who found stable housing">
+              <img src="assets/images/host-1.jpeg" alt="Volunteers packing grocery bags for delivery">
             </div>
           </div>
         </div>
@@ -140,17 +156,17 @@
         <div class="program-card">
           <div class="zigzag-row">
             <div>
-              <h2>Self-Sufficiency Program</h2>
-              <p>Stability lasts when it's built on a foundation of skills and confidence. Our Self-Sufficiency Program pairs clients with a coach for job readiness training, financial literacy classes, and practical life-skills workshops.</p>
+              <h2>STAY</h2>
+              <p>Long-term coaching for working families who already have a stable place to live. You work with a case manager to set your own goals and plan for the years ahead.</p>
               <ul>
-                <li>Job readiness training and resume support</li>
-                <li>Financial literacy and budgeting classes</li>
-                <li>One-on-one life-skills coaching</li>
+                <li>One-on-one coaching for 3 to 5 years</li>
+                <li>Meet with your case manager every 2 weeks</li>
+                <li>Rent help and money coaching in Anne Arundel County</li>
               </ul>
-              <a href="contact.html" class="btn btn-secondary">Learn More</a>
+              <a href="stay.html" class="btn btn-secondary">Explore STAY</a>
             </div>
             <div class="zigzag-row__media">
-              <img src="assets/images/get-involved-1.jpeg" alt="A Laurel Advocacy coach working with a program client">
+              <img src="assets/images/programs-3.jpg" alt="A smiling participant in a Laurel Advocacy coaching program">
             </div>
           </div>
         </div>
@@ -158,35 +174,17 @@
         <div class="program-card">
           <div class="zigzag-row">
             <div>
-              <h2>Integrated Services</h2>
-              <p>Crisis rarely shows up alone. Our case managers connect clients to healthcare, legal aid, childcare, and other community resources — coordinating care so nothing falls through the cracks.</p>
+              <h2>Permanent Supportive Housing</h2>
+              <p>A home of your own for people who have been homeless for a long time and have a disability. A case manager visits you at home and stays with you for as long as you need us.</p>
               <ul>
-                <li>Healthcare and mental health referrals</li>
-                <li>Legal aid partnerships</li>
-                <li>Childcare and family resource coordination</li>
+                <li>Apartments for 64 households in the Laurel area</li>
+                <li>Home visits and food delivered to your door</li>
+                <li>You do not have to be sober to get in, and a criminal record will not keep you out</li>
               </ul>
-              <a href="contact.html" class="btn btn-secondary">Learn More</a>
+              <a href="permanent-supportive-housing.html" class="btn btn-secondary">Learn About Housing</a>
             </div>
             <div class="zigzag-row__media">
-              <img src="assets/images/approach-1.jpg" alt="A Laurel Advocacy case manager reviewing a client's care plan">
-            </div>
-          </div>
-        </div>
-
-        <div class="program-card">
-          <div class="zigzag-row">
-            <div>
-              <h2>Specialty Programs</h2>
-              <p>We offer programs tailored to the specific circumstances our neighbors face, including support groups for teens, services for older adults, and dedicated advocacy for survivors seeking safety.</p>
-              <ul>
-                <li>Teen support and mentorship groups</li>
-                <li>Services for older adults</li>
-                <li>Dedicated survivor advocacy</li>
-              </ul>
-              <a href="contact.html" class="btn btn-secondary">Get Help</a>
-            </div>
-            <div class="zigzag-row__media">
-              <img src="assets/images/Impact-2.jpg" alt="A community member supported by Laurel Advocacy's specialty programs">
+              <img src="assets/images/approach-2.jpg" alt="A smiling resident of Laurel Advocacy supportive housing">
             </div>
           </div>
         </div>
@@ -194,12 +192,78 @@
     </div>
   </section>
 
-  <!-- ============== CLOSING CTA ============== -->
-  <section class="section newsletter">
-    <div class="container container--narrow text-center">
-      <h2 class="mb-4">Need Support? Reach Out Today</h2>
-      <p class="lead mb-8">Our team is ready to listen and help you find the right program for your situation.</p>
-      <a href="contact.html" class="btn btn-primary btn--lg">Contact Us</a>
+  <!-- ============== GET SUPPORT FORM ============== -->
+  <section class="section newsletter newsletter--form" id="get-support">
+    <div class="container">
+      <div class="grid-2" style="gap: 64px;">
+
+        <!-- Left column: intro + contact details -->
+        <div class="contact-details">
+          <h2 class="mb-4">Need Support? Reach Out Today</h2>
+          <p class="lead">Tell us a little about your situation and our team will respond within one business day — confidentially, and at no cost. If you need help right now, please call our 24/7 crisis line.</p>
+
+          <h3 style="margin-top: 40px;">Reach Us Directly</h3>
+          <div style="display: flex; flex-direction: column; gap: 24px; margin-top: 24px;">
+            <div>
+              <p class="muted small" style="text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">24/7 Crisis Line</p>
+              <p style="margin: 0;"><a href="tel:+15550101234" style="font-weight: 600;">(555) 010-1234</a></p>
+            </div>
+            <div>
+              <p class="muted small" style="text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">General Inquiries</p>
+              <p style="margin: 0;"><a href="mailto:hello@laureladvocacy.org" style="font-weight: 600;">hello@laureladvocacy.org</a></p>
+            </div>
+            <div>
+              <p class="muted small" style="text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">Volunteer &amp; Donations</p>
+              <p style="margin: 0;"><a href="mailto:volunteer@laureladvocacy.org" style="font-weight: 600;">volunteer@laureladvocacy.org</a></p>
+            </div>
+            <div>
+              <p class="muted small" style="text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">Office</p>
+              <p style="margin: 0;">311 Laurel Ave<br>Laurel, MD 20707</p>
+            </div>
+          </div>
+
+          <h3 style="margin-top: 40px;">Hours</h3>
+          <p>Office hours: Monday–Friday, 9am–5pm. Our crisis line is staffed 24 hours a day, every day of the year.</p>
+        </div>
+
+        <!-- Right column: support request form -->
+        <div class="feature-card" style="align-self: start;">
+          <h3>Request Support</h3>
+          <form style="margin-top: 20px;">
+            <div class="form-row--two">
+              <div class="form-group">
+                <label class="form-label" for="support-name">Name <span class="form-required" aria-hidden="true">*</span></label>
+                <input class="form-input" id="support-name" type="text" placeholder="Jane Smith" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="support-email">Email <span class="form-required" aria-hidden="true">*</span></label>
+                <input class="form-input" id="support-email" type="email" placeholder="you@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="support-phone">Phone (optional)</label>
+              <input class="form-input" id="support-phone" type="tel" placeholder="(555) 010-1234">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="support-type">Type of support <span class="form-required" aria-hidden="true">*</span></label>
+              <select class="form-select" id="support-type" required>
+                <option>Emergency Services</option>
+                <option>Housing Services</option>
+                <option>Self-Sufficiency Program</option>
+                <option>Integrated Services</option>
+                <option>Specialty Programs</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="support-message">Message</label>
+              <textarea class="form-textarea" id="support-message" placeholder="How can we help?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Request Support</button>
+          </form>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -226,6 +290,7 @@
             <li><a href="news-blog.html">News/Blog</a></li>
             <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
             <li><a href="events.html">Events</a></li>
+            <li><a href="careers.html">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -262,7 +327,7 @@
       </div>
       <div class="footer__bottom">
         <span>© 2026 Laurel Advocacy. All rights reserved.</span>
-        <span>LARS Federal Tax ID #52-1537336 · Privacy · Terms · Cookies</span>
+        <span>LARS Federal Tax ID #52-1537336 · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a></span>
       </div>
     </div>
   </footer>
