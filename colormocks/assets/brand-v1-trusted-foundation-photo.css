@@ -164,7 +164,7 @@ p { margin: 0 0 var(--space-md); }
 .nav__menu-btn { background: none; border: none; color: var(--ink); cursor: pointer; padding: 6px; }
 @media (min-width: 1024px) {
   .nav__links { display: flex; }
-  .nav__cta { display: block; }
+  .nav__cta { display: flex; align-items: center; gap: 12px; }
   .nav__menu-btn { display: none; }
 }
 .nav-mobile { position: fixed; inset: 0; background: var(--canvas); z-index: 60; display: none; flex-direction: column; padding: 24px; }
@@ -754,8 +754,9 @@ p { margin: 0 0 var(--space-md); }
 .page-header--get-involved { background-image: url('../assets/images/getinvolved-2.png'); }
 .page-header--stories { background-image: url('../assets/images/stories-1.png'); }
 .page-header--events { background-image: url('../assets/images/events-1.png'); }
+.page-header--past-events { background-image: url('../assets/images/events-1.png'); }
 .page-header--emergency { background-image: url('../assets/images/Programs-1.png'); }
-.page-header--on-the-go { background-image: url('../assets/images/events-1.png'); }
+.page-header--on-the-go { background-image: url('../assets/images/lotg-hero.webp'); background-position: center 40%; }
 .page-header--stay { background-image: url('../assets/images/about-2.png'); }
 .page-header--housing { background-image: url('../assets/images/stories-1.png'); }
 .page-header--careers { background-image: url('../assets/images/about-1.png'); }
@@ -1292,3 +1293,21 @@ p { margin: 0 0 var(--space-md); }
 .legal a { color: var(--primary); font-weight: 600; }
 .legal a:hover { text-decoration: underline; }
 .footer__bottom a:hover { color: var(--primary); text-decoration: underline; }
+
+/* ---------------- Photo pair (two images side by side above a section intro) ---------------- */
+.photo-pair { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 48px; }
+@media (min-width: 640px) { .photo-pair { grid-template-columns: 1fr 1fr; gap: 24px; } }
+.photo-pair img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--rounded-lg, 16px); }
+
+/* ---------------- Language toggle (Spanish translation) ---------------- */
+.nav__lang { display: inline-flex; align-items: center; gap: 6px; background: none; border: 1px solid var(--hairline); border-radius: var(--rounded-pill); padding: 8px 14px; font: inherit; font-size: 14px; font-weight: 600; color: var(--ink); cursor: pointer; }
+.nav__lang:hover { border-color: var(--primary); color: var(--primary); }
+.nav__lang svg { width: 16px; height: 16px; }
+.nav__lang--mobile { font-size: 18px; padding: 10px 18px; }
+/* Hide Google Translate's own toolbar so only our toggle shows */
+#google_translate_element, .goog-te-banner-frame, .skiptranslate iframe, #goog-gt-tt { display: none !important; }
+body { top: 0 !important; }
+
+/* Past events: show full flyers without cropping */
+.zigzag-row__media--flyer { box-shadow: none; overflow: visible; border-radius: 0; }
+.zigzag-row__media--flyer img { aspect-ratio: auto; height: auto; max-width: 440px; margin: 0 auto; border-radius: var(--rounded-lg); box-shadow: var(--shadow-card); }

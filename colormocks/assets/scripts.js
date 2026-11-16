@@ -14,6 +14,42 @@
     initModal();
     initDropdown();
     initLucide();
+    initLangToggle();
+  }
+
+  /* ---------- Spanish translation toggle (Google Translate) ---------- */
+  function langIsSpanish() { return /googtrans=\/en\/es/.test(document.cookie); }
+  function setGoogTrans(value) {
+    var host = location.hostname, exp = value ? '' : '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    var v = 'googtrans=' + (value || '') + exp + '; path=/';
+    document.cookie = v;
+    if (host && host.indexOf('.') > -1) document.cookie = v + '; domain=.' + host.replace(/^www\./, '');
+  }
+  function loadGoogleTranslate() {
+    if (document.getElementById('google_translate_element')) return;
+    var el = document.createElement('div'); el.id = 'google_translate_element'; document.body.appendChild(el);
+    window.googleTranslateElementInit = function () {
+      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'es', autoDisplay: false }, 'google_translate_element');
+    };
+    var s = document.createElement('script');
+    s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.body.appendChild(s);
+  }
+  function initLangToggle() {
+    var spanish = langIsSpanish();
+    if (spanish) loadGoogleTranslate();
+    document.querySelectorAll('[data-lang-toggle]').forEach(function (btn) {
+      if (btn.dataset.bound) return;
+      btn.dataset.bound = 'true';
+      btn.classList.add('notranslate');
+      var label = btn.querySelector('[data-lang-label]');
+      if (label) label.textContent = spanish ? 'English' : 'Español';
+      btn.setAttribute('aria-label', spanish ? 'View this site in English' : 'Ver este sitio en español');
+      btn.addEventListener('click', function () {
+        setGoogTrans(langIsSpanish() ? null : '/en/es');
+        location.reload();
+      });
+    });
   }
 
   /* ---------- Mobile menu ---------- */

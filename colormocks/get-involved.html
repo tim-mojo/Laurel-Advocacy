@@ -35,7 +35,8 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav__cta">
-          <a href="get-involved.html#give" class="btn btn-accent">Donate</a>
+          <button type="button" class="nav__lang" data-lang-toggle aria-label="Ver este sitio en español"><i data-lucide="globe"></i> <span data-lang-label>Español</span></button>
+          <a href="https://secure.qgiv.com/for/laureladvocacyandreferralservices" target="_blank" rel="noopener" class="btn btn-accent">Donate</a>
         </div>
         <button class="nav__menu-btn" data-mobile-menu-toggle="#laurel-mobile-nav" aria-label="Open menu">
           <i data-lucide="menu"></i>
@@ -64,7 +65,8 @@
       <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="get-involved.html#give">Donate</a></li>
+      <li><a href="https://secure.qgiv.com/for/laureladvocacyandreferralservices" target="_blank" rel="noopener">Donate</a></li>
+      <li><button type="button" class="nav__lang nav__lang--mobile" data-lang-toggle><i data-lucide="globe"></i> <span data-lang-label>Español</span></button></li>
     </ul>
   </div>
 
@@ -90,7 +92,7 @@
               <div>
                 <h2>Make a One-Time or Monthly Gift</h2>
                 <p>Monthly giving helps us plan ahead and respond quickly when a family needs us most.</p>
-                <button class="btn btn-primary btn--lg">Donate Now</button>
+                <a href="https://secure.qgiv.com/for/laureladvocacyandreferralservices" class="btn btn-primary btn--lg" target="_blank" rel="noopener">Donate Now</a>
               </div>
               <div class="zigzag-row__media">
                 <img src="assets/images/Impact-1.jpg" alt="A Laurel Advocacy team member providing support made possible by donor gifts">
@@ -103,7 +105,7 @@
               <div>
                 <h2>Vehicle Donations</h2>
                 <p>Donate your car, truck, van, or boat — running or not. We partner with a local vehicle donation program that handles pickup and paperwork, and the proceeds go straight to our programs.</p>
-                <button class="btn btn-secondary">Donate Your Vehicle</button>
+                <a href="https://www.ncsvehicledonations.com/nonprofits/laurel-advocacy-referral-services-lars/" class="btn btn-secondary" target="_blank" rel="noopener">Donate Your Vehicle</a>
               </div>
               <div class="zigzag-row__media">
                 <img src="assets/images/vehicle-1.jpg" alt="A vehicle donated to support Laurel Advocacy's programs">
@@ -191,7 +193,8 @@
           <p class="muted small"><span class="form-required" aria-hidden="true">*</span> Indicates required field</p>
         </div>
         <div class="form-card" style="align-self: start;">
-          <form>
+          <!-- DEV: send submissions to volunteer@laureladvocacy.org and email the respondent a copy of their answers (use the Email field). -->
+          <form data-recipient="volunteer@laureladvocacy.org" data-send-copy="true">
             <div class="form-group">
               <label class="form-label" for="vol-name">Full Name of Person / Group&nbsp;<span class="form-required" aria-hidden="true">*</span></label>
               <input class="form-input" id="vol-name" type="text" required>
@@ -249,22 +252,15 @@
             <fieldset class="form-group form-fieldset">
               <legend class="form-label">Please tell us how you would like to volunteer with Laurel Advocacy &amp; Referral Services, Inc.&nbsp;<span class="form-required" aria-hidden="true">*</span></legend>
               <div class="form-choices form-choices--cols">
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Photography/ Video"> <span>Photography/ Video</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Language translation"> <span>Language translation</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Data entry"> <span>Data entry</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="General office / clerical work"> <span>General office / clerical work</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Special events"> <span>Special events</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Maintenance / Repairs"> <span>Maintenance / Repairs</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Group volunteering"> <span>Group volunteering</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Case management"> <span>Case management</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Human resources / payroll / accounting"> <span>Human resources / payroll / accounting</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Food pantry"> <span>Food pantry</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Food pick-up &amp; delivery"> <span>Food pick-up &amp; delivery</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Mailings / envelope stuffing"> <span>Mailings / envelope stuffing</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Graphic design"> <span>Graphic design</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Speaker (On specific topics)"> <span>Speaker (On specific topics)</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="BSW / MSW Internship"> <span>BSW / MSW Internship</span></label>
-                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Job seeker services"> <span>Job seeker services</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Food Pantry"> <span>Food Pantry</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Special Events"> <span>Special Events</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Group Volunteer Opportunities"> <span>Group Volunteer Opportunities</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Pickups and Deliveries (SUV and pickup truck owners preferred)"> <span>Pickups and Deliveries (SUV and pickup truck owners preferred)</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Meal Preparation Service"> <span>Meal Preparation Service</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Race Against Hunger"> <span>Race Against Hunger</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Graphic Design / Photography / Video"> <span>Graphic Design / Photography / Video</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Internship"> <span>Internship</span></label>
+                <label class="form-choice"><input type="checkbox" name="vol-roles" value="Administrative Assistance"> <span>Administrative Assistance</span></label>
                 <label class="form-choice"><input type="checkbox" name="vol-roles" value="Wherever you need me"> <span>Wherever you need me</span></label>
               </div>
             </fieldset>
@@ -313,6 +309,7 @@
               <label class="form-label" for="vol-other-skills">Other skills-based opportunity: Please Specify&nbsp;<span class="form-required" aria-hidden="true">*</span></label>
               <input class="form-input" id="vol-other-skills" type="text">
             </div>
+          <p class="muted small" style="margin-bottom: 12px;">We'll email you a copy of your answers. Questions? Contact <a href="mailto:volunteer@laureladvocacy.org" style="color: var(--primary); font-weight: 600;">volunteer@laureladvocacy.org</a>.</p>
           <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
           </form>
         </div>
@@ -352,7 +349,7 @@
             <li><a href="news-blog.html">News/Blog</a></li>
             <li><a href="stories-impact.html">Stories &amp; Impact</a></li>
             <li><a href="events.html">Events</a></li>
-            <li><a href="careers.html">Careers</a></li>
+            <li><a href="careers.html#open-positions">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -362,9 +359,11 @@
           <p class="footer__contact">311 Laurel Ave<br>Laurel, MD 20707</p>
         </div>
         <div>
-          <h4>Client Service Hours</h4>
-          <p class="footer__contact"><strong>Monday</strong>, 9:00am to 2:00pm, 5:00pm to 7:30pm</p>
-          <p class="footer__contact" style="margin-top:12px;"><strong>Tuesday - Thursday</strong>, 9:00am to 2:00pm</p>
+          <h4>Lobby / Client Hours</h4>
+          <p class="footer__contact"><strong>Monday–Thursday</strong>, 9:00 AM–2:00 PM</p>
+          <p class="footer__contact"><strong>Monday</strong>, 5:00 PM–7:30 PM</p>
+          <h4 style="margin-top:20px;">Office Hours</h4>
+          <p class="footer__contact"><strong>Monday–Friday</strong>, 9:00 AM–5:00 PM</p>
         </div>
       </div>
       <div class="footer__mid">
